@@ -31,7 +31,7 @@ public class StudentController {
 
     @GetMapping
     public List<Student> getAllStudents() {
-        return studentService.getAllUsers();
+        return studentService.getAllStudents();
     }
 
     @Operation(summary = "Импорт студентов из Excel файла")

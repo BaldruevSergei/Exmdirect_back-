@@ -22,4 +22,11 @@ public interface StudentRepository extends AbstractUserRepository<Student> {
         WHERE cs.teacher.id = :teacherId
     """)
     List<Student> findStudentsByTeacherId(@Param("teacherId") Long teacherId);
+    @Query("SELECT s.login FROM Student s")
+
+    List<String> findAllLogins();
+
+    boolean existsByFirstNameAndLastNameAndLogin(String firstName, String lastName, String login);
+
+
 }
