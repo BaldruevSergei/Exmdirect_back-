@@ -1,0 +1,97 @@
+2025-02-04T10:49:16.620+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] o.e.e.ExmdirectBackApplication           : Starting ExmdirectBackApplication using Java 17.0.13 with PID 3228 (D:\AIT-TR\EXMDIRECT\Exmdirect_Back\exmdirect_back\build\classes\java\main started by 42 in D:\AIT-TR\EXMDIRECT\Exmdirect_Back\exmdirect_back)
+2025-02-04T10:49:16.622+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] o.e.e.ExmdirectBackApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-02-04T10:49:16.751+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-04T10:49:16.751+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-04T10:49:17.301+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-04T10:49:17.302+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-04T10:49:17.376+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 69 ms. Found 5 JPA repository interfaces.
+2025-02-04T10:49:17.463+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-04T10:49:17.463+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-02-04T10:49:17.466+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.example.exmdirect_new.repository.AdminRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-02-04T10:49:17.466+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.example.exmdirect_new.repository.ClassSubjectRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-02-04T10:49:17.466+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.example.exmdirect_new.repository.SchoolClassRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-02-04T10:49:17.466+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.example.exmdirect_new.repository.StudentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-02-04T10:49:17.466+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.example.exmdirect_new.repository.TeacherRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-02-04T10:49:17.467+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JDBC repository interfaces.
+2025-02-04T10:49:17.867+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-02-04T10:49:17.874+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-04T10:49:17.874+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-04T10:49:17.910+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-04T10:49:17.910+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1154 ms
+2025-02-04T10:49:18.002+08:00 DEBUG 3228 --- [exmdirect_new] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-02-04T10:49:18.063+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-04T10:49:18.093+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-04T10:49:18.111+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-04T10:49:18.265+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-04T10:49:18.280+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-04T10:49:18.391+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@d59eb20
+2025-02-04T10:49:18.393+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-04T10:49:18.429+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-04T10:49:18.432+08:00 DEBUG 3228 --- [exmdirect_new] [restartedMain] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@59d27d2d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@59ee401b)
+2025-02-04T10:49:18.432+08:00 DEBUG 3228 --- [exmdirect_new] [restartedMain] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@255c9b3d) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@2ccd4019)
+2025-02-04T10:49:19.001+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-04T10:49:19.174+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T10:49:19.385+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-04T10:49:19.677+08:00  WARN 3228 --- [exmdirect_new] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-04T10:49:19.793+08:00 DEBUG 3228 --- [exmdirect_new] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 6 mappings in 'requestMappingHandlerMapping'
+2025-02-04T10:49:19.858+08:00 DEBUG 3228 --- [exmdirect_new] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-02-04T10:49:19.948+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-02-04T10:49:20.029+08:00 DEBUG 3228 --- [exmdirect_new] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-02-04T10:49:20.055+08:00  WARN 3228 --- [exmdirect_new] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-04T10:49:20.080+08:00 DEBUG 3228 --- [exmdirect_new] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-02-04T10:49:20.364+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-04T10:49:20.414+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-02-04T10:49:20.426+08:00  INFO 3228 --- [exmdirect_new] [restartedMain] o.e.e.ExmdirectBackApplication           : Started ExmdirectBackApplication in 4.099 seconds (process running for 4.592)
+2025-02-04T10:49:20.730+08:00  INFO 3228 --- [exmdirect_new] [RMI TCP Connection(1)-192.168.90.4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-04T10:49:20.730+08:00  INFO 3228 --- [exmdirect_new] [RMI TCP Connection(1)-192.168.90.4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-04T10:49:20.731+08:00 DEBUG 3228 --- [exmdirect_new] [RMI TCP Connection(1)-192.168.90.4] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-02-04T10:49:20.731+08:00 DEBUG 3228 --- [exmdirect_new] [RMI TCP Connection(1)-192.168.90.4] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-02-04T10:49:20.731+08:00 DEBUG 3228 --- [exmdirect_new] [RMI TCP Connection(1)-192.168.90.4] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-02-04T10:49:20.732+08:00 DEBUG 3228 --- [exmdirect_new] [RMI TCP Connection(1)-192.168.90.4] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6dc08cd6
+2025-02-04T10:49:20.732+08:00 DEBUG 3228 --- [exmdirect_new] [RMI TCP Connection(1)-192.168.90.4] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@28756fd8
+2025-02-04T10:49:20.732+08:00 DEBUG 3228 --- [exmdirect_new] [RMI TCP Connection(1)-192.168.90.4] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-02-04T10:49:20.732+08:00  INFO 3228 --- [exmdirect_new] [RMI TCP Connection(1)-192.168.90.4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-02-04T10:49:28.185+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.html", parameters={}
+2025-02-04T10:49:28.187+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-02-04T10:49:28.199+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-04T10:49:28.208+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui.css", parameters={}
+2025-02-04T10:49:28.208+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+2025-02-04T10:49:28.208+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+2025-02-04T10:49:28.208+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-02-04T10:49:28.209+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-initializer.js", parameters={}
+2025-02-04T10:49:28.209+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.css", parameters={}
+2025-02-04T10:49:28.209+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-02-04T10:49:28.209+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-02-04T10:49:28.209+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-02-04T10:49:28.210+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-02-04T10:49:28.212+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-04T10:49:28.214+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-04T10:49:28.216+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-04T10:49:28.225+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-04T10:49:28.229+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-04T10:49:28.267+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/favicon-32x32.png", parameters={}
+2025-02-04T10:49:28.267+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-02-04T10:49:28.268+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs/swagger-config", parameters={}
+2025-02-04T10:49:28.268+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2025-02-04T10:49:28.269+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-04T10:49:28.277+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2025-02-04T10:49:28.278+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8081/swagger-ui/oauth2-re (truncated)...]
+2025-02-04T10:49:28.281+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-04T10:49:28.288+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}
+2025-02-04T10:49:28.288+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2025-02-04T10:49:28.336+08:00  INFO 3228 --- [exmdirect_new] [http-nio-8081-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 41 ms
+2025-02-04T10:49:28.341+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
+2025-02-04T10:49:28.341+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+2025-02-04T10:49:28.342+08:00 DEBUG 3228 --- [exmdirect_new] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-04T10:49:57.845+08:00  INFO 3228 --- [exmdirect_new] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-04T10:49:57.869+08:00  INFO 3228 --- [exmdirect_new] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-04T10:49:57.874+08:00  INFO 3228 --- [exmdirect_new] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-04T10:49:57.876+08:00  INFO 3228 --- [exmdirect_new] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-04T10:49:57.878+08:00  INFO 3228 --- [exmdirect_new] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
