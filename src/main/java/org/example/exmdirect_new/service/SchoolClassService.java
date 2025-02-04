@@ -28,7 +28,7 @@ public class SchoolClassService {
     }
 
     // Получить все классы, которые курирует определённый учитель
-    public List<SchoolClass> getClassesByTeacher(vTeacher teacher) {
+    public List<SchoolClass> getClassesByTeacher(Teacher teacher) {
         return schoolClassRepository.findByClassTeacher(teacher);
     }
 

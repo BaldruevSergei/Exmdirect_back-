@@ -50,6 +50,10 @@ dependencies {
 
     implementation 'org.flywaydb:flyway-core'
 
+    implementation 'org.apache.poi:poi:5.2.3' // Основной модуль для работы с Excel (HSSF)
+    implementation 'org.apache.poi:poi-ooxml:5.2.3' // Модуль для работы с форматом .xlsx
+    implementation 'org.apache.commons:commons-collections4:4.4' // Зависимость для работы POI
+    implementation 'org.apache.commons:commons-compress:1.21' // Сжатие для форматов Excel
     /*implementation 'org.springframework.boot:spring-boot-starter-data-redis'*/
 
 
