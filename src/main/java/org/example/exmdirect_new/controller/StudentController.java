@@ -33,6 +33,12 @@ public class StudentController {
     public List<Student> getAllStudents() {
         return studentService.getAllStudents();
     }
+    @DeleteMapping("/students")
+    public ResponseEntity<String> deleteAllStudents() {
+        studentService.deleteAll(); // Ensure this method is implemented in your service
+        return ResponseEntity.ok("All students have been deleted.");
+    }
+
 
     @Operation(summary = "Импорт студентов из Excel файла")
     @ApiResponses({

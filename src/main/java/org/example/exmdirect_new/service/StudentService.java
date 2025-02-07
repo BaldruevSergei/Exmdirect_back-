@@ -169,4 +169,8 @@ public class StudentService {
 
         return new String[]{firstName, lastName};
     }
+
+    public void deleteAll() {
+        studentRepository.deleteAll();
+    }
 }
