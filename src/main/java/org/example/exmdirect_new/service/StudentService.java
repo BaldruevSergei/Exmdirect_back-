@@ -7,8 +7,10 @@ import org.example.exmdirect_new.entity.SchoolClass;
 import org.example.exmdirect_new.entity.Student;
 import org.example.exmdirect_new.entity.UserRole;
 import org.example.exmdirect_new.repository.StudentRepository;
+import org.example.exmdirect_new.util.PasswordValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -24,10 +26,15 @@ public class StudentService {
 
     private final StudentRepository studentRepository;
     private final SchoolClassService schoolClassService;
+    private final BCryptPasswordEncoder passwordEncoder;
 
-    public StudentService(StudentRepository studentRepository, SchoolClassService schoolClassService) {
+    @Autowired
+    public StudentService(StudentRepository studentRepository,
+                          SchoolClassService schoolClassService,
+                          BCryptPasswordEncoder passwordEncoder) {
         this.studentRepository = studentRepository;
         this.schoolClassService = schoolClassService;
+        this.passwordEncoder = passwordEncoder; // Инициализация passwordEncoder через @Autowired
     }
 
     // Получить список студентов, которых обучает определённый учитель
@@ -173,4 +180,31 @@ public class StudentService {
     public void deleteAll() {
         studentRepository.deleteAll();
     }
+
+    // **5. Смена логина (почты) и пароля при первом входе**
+    public String updateLoginAndPassword(Long studentId, String newEmail, String newPassword) {
+        Optional<Student> studentOpt = studentRepository.findById(studentId);
+        if (studentOpt.isEmpty()) {
+            return "Студент не найден";
+        }
+
+        Student student = studentOpt.get();
+
+        // Проверка валидности пароля
+        if (!PasswordValidator.isValidPassword(newPassword)) {
+            return "Пароль не соответствует требованиям";
+        }
+
+        // Проверка уникальности email (логина)
+        if (studentRepository.findByLogin(newEmail).isPresent()) {
+            return "Этот email уже используется";
+        }
+
+        student.setLogin(newEmail);
+        student.setEmail(newEmail);
+        student.setPassword(passwordEncoder.encode(newPassword));
+        studentRepository.save(student);
+        return "Логин (email) и пароль успешно обновлены";
+    }
+
 }

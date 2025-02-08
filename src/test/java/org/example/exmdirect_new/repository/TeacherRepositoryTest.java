@@ -1,9 +1,9 @@
 package org.example.exmdirect_new.repository;
 
-import com.example.exmdirect_new.entity.ClassSubject;
-import com.example.exmdirect_new.entity.SchoolClass;
-import com.example.exmdirect_new.entity.Teacher;
-import com.example.exmdirect_new.entity.UserRole;
+import org.example.exmdirect_new.entity.ClassSubject;
+import org.example.exmdirect_new.entity.SchoolClass;
+import org.example.exmdirect_new.entity.Teacher;
+import org.example.exmdirect_new.entity.UserRole;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

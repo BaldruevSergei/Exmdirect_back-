@@ -13,22 +13,17 @@ java {
     }
 }
 
-configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
-    }
-}
-
 repositories {
     mavenCentral()
     maven { url 'https://repo.spring.io/milestone' }
 }
 
 ext {
-    set('springAiVersion', "1.0.0-M5")
+    springAiVersion = "1.0.0-M5"
 }
 
 dependencies {
+    // Spring Boot Starters
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
     implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -37,33 +32,53 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     implementation 'org.springframework.boot:spring-boot-starter-validation'
     implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+
+    // Spring AI
     implementation 'org.springframework.ai:spring-ai-openai-spring-boot-starter'
-    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // OpenAPI Documentation
     implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0'
+
+    // Thymeleaf Extras
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6'
+
+    // Security and JWT
+    implementation 'org.springframework.security:spring-security-crypto'
     implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
     runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
     runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5'
-    implementation 'org.springframework.security:spring-security-crypto'
 
-    implementation 'org.springframework.boot:spring-boot-starter-cache'
-
+    // Database Migration
     implementation 'org.flywaydb:flyway-core'
 
-    implementation 'org.apache.poi:poi:5.2.3' // Основной модуль для работы с Excel (HSSF)
-    implementation 'org.apache.poi:poi-ooxml:5.2.3' // Модуль для работы с форматом .xlsx
-    implementation 'org.apache.commons:commons-collections4:4.4' // Зависимость для работы POI
-    implementation 'org.apache.commons:commons-compress:1.21' // Сжатие для форматов Excel
-    /*implementation 'org.springframework.boot:spring-boot-starter-data-redis'*/
+    // Excel Support
+    implementation 'org.apache.poi:poi:5.2.3'
+    implementation 'org.apache.poi:poi-ooxml:5.2.3'
+    implementation 'org.apache.commons:commons-collections4:4.4'
+    implementation 'org.apache.commons:commons-compress:1.21'
 
-
-    compileOnly 'org.projectlombok:lombok'
-    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    // PostgreSQL
     runtimeOnly 'org.postgresql:postgresql'
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // Spring Boot DevTools
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    // Testing
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
     testImplementation 'org.springframework.security:spring-security-test'
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.10.0'
+    testImplementation 'org.mockito:mockito-core:5.7.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.7.0'
+    testImplementation 'org.apache.poi:poi-ooxml:5.2.3'
 }
 
 dependencyManagement {

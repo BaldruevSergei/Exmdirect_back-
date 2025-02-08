@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
@@ -19,15 +20,27 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
+                        // Разрешение публичного доступа к Swagger
                         .requestMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-ui.html").permitAll()
-                        .anyRequest().permitAll() //  Allows public access to all endpoints
+
+                        // Разрешение доступа к эндпоинтам учителя
+                        .requestMatchers("/teachers").permitAll() // Список всех учителей
+                        .requestMatchers("/teachers/{id}").permitAll() // Получение учителя по ID
+                        .requestMatchers("/teachers/subject/**").permitAll() // Поиск по предмету
+                        .requestMatchers("/teachers/upload").permitAll() // Загрузка учителей из файла
+                        .requestMatchers("/teachers/update-login").permitAll() // Смена логина и пароля
+                        .requestMatchers("/teachers/**").permitAll() // Любые дополнительные эндпоинты учителя
+
+                        // Разрешение публичного доступа ко всем запросам
+                        .anyRequest().permitAll()
                 )
                 .httpBasic(Customizer.withDefaults());
 
-
-
-
         logger.debug("Фильтр безопасности успешно настроен");
         return http.build();
+    }
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 }
