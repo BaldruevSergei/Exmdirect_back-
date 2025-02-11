@@ -31,6 +31,13 @@ public class SecurityConfig {
                         .requestMatchers("/teachers/update-login").permitAll() // Смена логина и пароля
                         .requestMatchers("/teachers/**").permitAll() // Любые дополнительные эндпоинты учителя
 
+                        // Разрешение доступа к эндпоинтам вопросов
+                        .requestMatchers("/questions").permitAll() // Получение всех вопросов
+                        .requestMatchers("/questions/{id}").permitAll() // Получение вопроса по ID
+                        .requestMatchers("/questions/group/{groupId}").permitAll() // Вопросы по группе
+                        .requestMatchers("/questions/upload").permitAll() // Загрузка вопросов из файла
+                        .requestMatchers("/questions/**").permitAll() // Любые дополнительные эндпоинты вопросов
+
                         // Разрешение публичного доступа ко всем запросам
                         .anyRequest().permitAll()
                 )
@@ -39,6 +46,7 @@ public class SecurityConfig {
         logger.debug("Фильтр безопасности успешно настроен");
         return http.build();
     }
+
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
