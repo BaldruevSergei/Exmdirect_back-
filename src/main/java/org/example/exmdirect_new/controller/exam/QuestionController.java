@@ -95,6 +95,16 @@ public class QuestionController {
             return ResponseEntity.badRequest().body("Ошибка: " + e.getMessage());
         }
     }
+    @DeleteMapping("/group/{groupId}/deleteAll")
+    public ResponseEntity<String> deleteAllQuestions(@PathVariable Long groupId) {
+        try {
+            questionService.deleteAllQuestions(groupId);
+            return ResponseEntity.ok("Все вопросы удалены для группы ID: " + groupId);
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Ошибка удаления вопросов");
+        }
+    }
+
 
     @GetMapping("/subjects")
     public List<SubjectDTO> getSubjects() {
@@ -116,5 +126,15 @@ public class QuestionController {
         List<ExamDTO> exams = examService.getExamsBySubject(subjectId);
         return ResponseEntity.ok(exams);
     }
+    @GetMapping("/group/{groupId}/answers")
+    public ResponseEntity<List<QuestionDTO>> getQuestionsWithAnswers(@PathVariable Long groupId) {
+        List<QuestionDTO> questions = questionService.getQuestionsByGroup(groupId)
+                .stream()
+                .map(QuestionDTO::new) // Преобразование Question -> QuestionDTO
+                .collect(Collectors.toList());
+
+        return ResponseEntity.ok(questions);
+    }
+
 
 }

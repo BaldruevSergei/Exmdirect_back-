@@ -4367,3 +4367,3457 @@
 2025-02-11T09:46:45.547+08:00  INFO 26820 --- [exmdirect_new] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-02-11T09:46:45.549+08:00  INFO 26820 --- [exmdirect_new] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-02-11T09:46:45.551+08:00  INFO 26820 --- [exmdirect_new] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-11T09:59:23.926+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] o.e.e.ExmdirectBackApplication           : Starting ExmdirectBackApplication using Java 17.0.13 with PID 20868 (D:\AIT-TR\EXMDIRECT\Exmdirect_Back\build\classes\java\main started by 42 in D:\AIT-TR\EXMDIRECT\Exmdirect_Back)
+2025-02-11T09:59:23.928+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] o.e.e.ExmdirectBackApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-02-11T09:59:24.045+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-02-11T09:59:24.045+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-02-11T09:59:24.571+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-11T09:59:24.572+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-02-11T09:59:24.653+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 11 JPA repository interfaces.
+2025-02-11T09:59:24.741+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-02-11T09:59:24.741+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-02-11T09:59:24.745+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.example.exmdirect_new.repository.AdminRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-02-11T09:59:24.746+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.example.exmdirect_new.repository.ClassSubjectRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-02-11T09:59:24.746+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.example.exmdirect_new.repository.exam.AnswerRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-02-11T09:59:24.746+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.example.exmdirect_new.repository.exam.ExamRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-02-11T09:59:24.746+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.example.exmdirect_new.repository.exam.QuestionGroupRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-02-11T09:59:24.746+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.example.exmdirect_new.repository.exam.QuestionRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-02-11T09:59:24.746+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.example.exmdirect_new.repository.exam.StudentExamRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-02-11T09:59:24.746+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.example.exmdirect_new.repository.exam.SubjectRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-02-11T09:59:24.746+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.example.exmdirect_new.repository.SchoolClassRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-02-11T09:59:24.746+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.example.exmdirect_new.repository.StudentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-02-11T09:59:24.746+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface org.example.exmdirect_new.repository.TeacherRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-02-11T09:59:24.747+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 0 JDBC repository interfaces.
+2025-02-11T09:59:25.138+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-02-11T09:59:25.144+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-11T09:59:25.145+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-02-11T09:59:25.174+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-11T09:59:25.174+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1128 ms
+2025-02-11T09:59:25.263+08:00 DEBUG 20868 --- [exmdirect_new] [restartedMain] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2025-02-11T09:59:25.324+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-02-11T09:59:25.352+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-02-11T09:59:25.369+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-02-11T09:59:25.503+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-02-11T09:59:25.518+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-11T09:59:25.605+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@15a3b55c
+2025-02-11T09:59:25.606+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-11T09:59:25.642+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-02-11T09:59:25.645+08:00 DEBUG 20868 --- [exmdirect_new] [restartedMain] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(2003, org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@6f13b8c5) replaced previous registration(org.hibernate.type.descriptor.sql.internal.ArrayDdlTypeImpl@405b2505)
+2025-02-11T09:59:25.645+08:00 DEBUG 20868 --- [exmdirect_new] [restartedMain] o.h.t.d.sql.spi.DdlTypeRegistry          : addDescriptor(6, org.hibernate.type.descriptor.sql.internal.CapacityDependentDdlType@2040d8b1) replaced previous registration(org.hibernate.type.descriptor.sql.internal.DdlTypeImpl@32ddb5e8)
+2025-02-11T09:59:26.248+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-02-11T09:59:26.724+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T09:59:26.951+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-02-11T09:59:27.263+08:00  WARN 20868 --- [exmdirect_new] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-02-11T09:59:27.288+08:00 DEBUG 20868 --- [exmdirect_new] [restartedMain] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+2025-02-11T09:59:27.382+08:00 DEBUG 20868 --- [exmdirect_new] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : 19 mappings in 'requestMappingHandlerMapping'
+2025-02-11T09:59:27.448+08:00 DEBUG 20868 --- [exmdirect_new] [restartedMain] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2025-02-11T09:59:27.550+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2025-02-11T09:59:27.594+08:00 DEBUG 20868 --- [exmdirect_new] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BasicAuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, ExceptionTranslationFilter, AuthorizationFilter
+2025-02-11T09:59:27.650+08:00 DEBUG 20868 --- [exmdirect_new] [restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2025-02-11T09:59:27.677+08:00  WARN 20868 --- [exmdirect_new] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-02-11T09:59:27.700+08:00 DEBUG 20868 --- [exmdirect_new] [restartedMain] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2025-02-11T09:59:28.020+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-02-11T09:59:28.074+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-02-11T09:59:28.084+08:00  INFO 20868 --- [exmdirect_new] [restartedMain] o.e.e.ExmdirectBackApplication           : Started ExmdirectBackApplication in 4.386 seconds (process running for 4.72)
+2025-02-11T09:59:28.508+08:00  INFO 20868 --- [exmdirect_new] [RMI TCP Connection(2)-192.168.90.4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-11T09:59:28.508+08:00  INFO 20868 --- [exmdirect_new] [RMI TCP Connection(2)-192.168.90.4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-11T09:59:28.508+08:00 DEBUG 20868 --- [exmdirect_new] [RMI TCP Connection(2)-192.168.90.4] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2025-02-11T09:59:28.508+08:00 DEBUG 20868 --- [exmdirect_new] [RMI TCP Connection(2)-192.168.90.4] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2025-02-11T09:59:28.508+08:00 DEBUG 20868 --- [exmdirect_new] [RMI TCP Connection(2)-192.168.90.4] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2025-02-11T09:59:28.510+08:00 DEBUG 20868 --- [exmdirect_new] [RMI TCP Connection(2)-192.168.90.4] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7847f15c
+2025-02-11T09:59:28.510+08:00 DEBUG 20868 --- [exmdirect_new] [RMI TCP Connection(2)-192.168.90.4] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1481d301
+2025-02-11T09:59:28.510+08:00 DEBUG 20868 --- [exmdirect_new] [RMI TCP Connection(2)-192.168.90.4] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2025-02-11T09:59:28.511+08:00  INFO 20868 --- [exmdirect_new] [RMI TCP Connection(2)-192.168.90.4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-02-11T09:59:30.666+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.html
+2025-02-11T09:59:30.674+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.html
+2025-02-11T09:59:30.675+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.html", parameters={}
+2025-02-11T09:59:30.677+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-02-11T09:59:30.690+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-11T09:59:30.690+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-02-11T09:59:30.698+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-initializer.js
+2025-02-11T09:59:30.699+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/index.css
+2025-02-11T09:59:30.698+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-bundle.js
+2025-02-11T09:59:30.699+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui-standalone-preset.js
+2025-02-11T09:59:30.699+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/swagger-ui.css
+2025-02-11T09:59:30.700+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-bundle.js
+2025-02-11T09:59:30.700+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-initializer.js
+2025-02-11T09:59:30.700+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui.css
+2025-02-11T09:59:30.700+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/swagger-ui-standalone-preset.js
+2025-02-11T09:59:30.700+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-initializer.js", parameters={}
+2025-02-11T09:59:30.700+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-bundle.js", parameters={}
+2025-02-11T09:59:30.700+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui.css", parameters={}
+2025-02-11T09:59:30.700+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/swagger-ui-standalone-preset.js", parameters={}
+2025-02-11T09:59:30.700+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/index.css
+2025-02-11T09:59:30.700+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/index.css", parameters={}
+2025-02-11T09:59:30.701+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-4] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-02-11T09:59:30.701+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-8] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-02-11T09:59:30.701+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-6] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-02-11T09:59:30.701+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-3] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-02-11T09:59:30.701+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-2] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-02-11T09:59:30.703+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-11T09:59:30.704+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-02-11T09:59:30.705+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-11T09:59:30.706+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-02-11T09:59:30.708+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-11T09:59:30.709+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-02-11T09:59:30.715+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-4] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-11T09:59:30.715+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-02-11T09:59:30.719+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-11T09:59:30.719+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-02-11T09:59:30.782+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /swagger-ui/favicon-32x32.png
+2025-02-11T09:59:30.782+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs/swagger-config
+2025-02-11T09:59:30.783+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /swagger-ui/favicon-32x32.png
+2025-02-11T09:59:30.783+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : GET "/swagger-ui/favicon-32x32.png", parameters={}
+2025-02-11T09:59:30.783+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs/swagger-config
+2025-02-11T09:59:30.783+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs/swagger-config", parameters={}
+2025-02-11T09:59:30.784+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-7] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.ui.SwaggerConfigResource#openapiJson(HttpServletRequest)
+2025-02-11T09:59:30.784+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-5] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2025-02-11T09:59:30.786+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-11T09:59:30.786+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-02-11T09:59:30.795+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json]
+2025-02-11T09:59:30.797+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-7] m.m.a.RequestResponseBodyMethodProcessor : Writing [{configUrl=/v3/api-docs/swagger-config, oauth2RedirectUrl=http://localhost:8081/swagger-ui/oauth2-re (truncated)...]
+2025-02-11T09:59:30.799+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-7] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-11T09:59:30.799+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-02-11T09:59:30.807+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /v3/api-docs
+2025-02-11T09:59:30.808+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /v3/api-docs
+2025-02-11T09:59:30.808+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : GET "/v3/api-docs", parameters={}
+2025-02-11T09:59:30.808+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-9] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springdoc.webmvc.api.OpenApiWebMvcResource#openapiJson(HttpServletRequest, String, Locale)
+2025-02-11T09:59:30.939+08:00  INFO 20868 --- [exmdirect_new] [http-nio-8081-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 122 ms
+2025-02-11T09:59:30.951+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [application/json, */*] and supported [application/json]
+2025-02-11T09:59:30.952+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-9] m.m.a.RequestResponseBodyMethodProcessor : Writing [{123, 34, 111, 112, 101, 110, 97, 112, 105, 34, 58, 34, 51, 46, 48, 46, 49, 34, 44, 34, 105, 110, 10 (truncated)...]
+2025-02-11T09:59:30.952+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-9] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-11T09:59:30.952+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-02-11T09:59:39.439+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-10] o.s.security.web.FilterChainProxy        : Securing DELETE /api/questions/1
+2025-02-11T09:59:39.440+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-10] o.s.security.web.FilterChainProxy        : Secured DELETE /api/questions/1
+2025-02-11T09:59:39.440+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : DELETE "/api/questions/1", parameters={}
+2025-02-11T09:59:39.441+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-10] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.example.exmdirect_new.controller.exam.QuestionController#deleteQuestion(Long)
+2025-02-11T09:59:39.476+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-10] org.hibernate.SQL                        : 
+    select
+        q1_0.id,
+        q1_0.correct_text_answer,
+        q1_0.question_group_id,
+        qg1_0.id,
+        qg1_0.exam_id,
+        e1_0.id,
+        e1_0.duration,
+        e1_0.end_time,
+        e1_0.name,
+        e1_0.start_time,
+        e1_0.subject_id,
+        s1_0.id,
+        s1_0.name,
+        qg1_0.name,
+        q1_0.question_type,
+        q1_0.text 
+    from
+        public.questions q1_0 
+    join
+        public.question_groups qg1_0 
+            on qg1_0.id=q1_0.question_group_id 
+    join
+        public.exams e1_0 
+            on e1_0.id=qg1_0.exam_id 
+    join
+        public.subjects s1_0 
+            on s1_0.id=e1_0.subject_id 
+    where
+        q1_0.id=?
+2025-02-11T09:59:39.513+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-10] org.hibernate.SQL                        : 
+    select
+        a1_0.question_id,
+        a1_0.id,
+        a1_0.is_correct,
+        a1_0.text 
+    from
+        public.answers a1_0 
+    where
+        a1_0.question_id=?
+2025-02-11T09:59:39.518+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-10] org.hibernate.SQL                        : 
+    select
+        mp1_0.question_id,
+        mp1_0.id,
+        mp1_0.fixed_part,
+        mp1_0.matching_answer 
+    from
+        public.matching_pairs mp1_0 
+    where
+        mp1_0.question_id=?
+2025-02-11T09:59:39.538+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-10] org.hibernate.SQL                        : 
+    delete 
+    from
+        public.ordered_answers 
+    where
+        question_id=?
+2025-02-11T09:59:39.548+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-10] org.hibernate.SQL                        : 
+    delete 
+    from
+        public.questions 
+    where
+        id=?
+2025-02-11T09:59:39.553+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json, application/yaml]
+2025-02-11T09:59:39.553+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Вопрос успешно удален."]
+2025-02-11T09:59:39.555+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-10] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-11T09:59:39.555+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-02-11T10:00:19.377+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/questions/upload?groupId=1
+2025-02-11T10:00:19.378+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/questions/upload?groupId=1
+2025-02-11T10:00:19.379+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/api/questions/upload?groupId=1", parameters={multipart}
+2025-02-11T10:00:19.396+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.example.exmdirect_new.controller.exam.QuestionController#uploadQuestions(MultipartFile, Long)
+2025-02-11T10:00:19.834+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    select
+        qg1_0.id,
+        qg1_0.exam_id,
+        e1_0.id,
+        e1_0.duration,
+        e1_0.end_time,
+        e1_0.name,
+        e1_0.start_time,
+        e1_0.subject_id,
+        s1_0.id,
+        s1_0.name,
+        qg1_0.name 
+    from
+        public.question_groups qg1_0 
+    join
+        public.exams e1_0 
+            on e1_0.id=qg1_0.exam_id 
+    join
+        public.subjects s1_0 
+            on s1_0.id=e1_0.subject_id 
+    where
+        qg1_0.id=?
+2025-02-11T10:00:19.843+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.854+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.860+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.861+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.861+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.863+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.863+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.865+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.866+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.866+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.867+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.868+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.869+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.869+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.870+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.871+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.872+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.873+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.873+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.874+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.875+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.875+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.877+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.878+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.878+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.879+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.880+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.881+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.882+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.882+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.883+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.884+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.885+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.886+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.886+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.887+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.888+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.889+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.890+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.890+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.891+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.892+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.894+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.894+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.894+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.895+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.896+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.898+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.898+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.899+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.900+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.900+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.902+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.902+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.902+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.903+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.904+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.906+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.906+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.906+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.907+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.908+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.910+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.910+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.910+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.911+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.912+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.914+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.914+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.914+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.915+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.916+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.917+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.918+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.918+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.919+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.920+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.921+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.921+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.922+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.922+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.923+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.924+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.924+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.925+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.926+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.926+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.928+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.928+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.928+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.929+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.930+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.931+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.931+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.931+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.932+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.933+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.934+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.934+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.935+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.935+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.936+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.937+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.937+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.938+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.939+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.940+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.941+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.941+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.942+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.942+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.944+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.945+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.945+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.946+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.946+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.947+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.948+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.949+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.949+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.950+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.950+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.951+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.952+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.953+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.953+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.954+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.955+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.955+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.955+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.956+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.956+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.957+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.957+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.958+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.958+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.959+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.960+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.960+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.961+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.962+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.962+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.963+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.963+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.963+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.964+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.965+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.965+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.966+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.966+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.967+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.967+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.968+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.968+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.969+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.969+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.970+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.970+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.971+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.971+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.972+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.972+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.973+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.973+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.974+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.974+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.975+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.976+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.976+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.977+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.978+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.978+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.979+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.979+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.979+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.980+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.981+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.981+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.982+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.982+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.982+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.983+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.983+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.984+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.984+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.985+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.985+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.986+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.986+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.987+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.987+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.988+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.989+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.989+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.989+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.990+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.990+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.991+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.992+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.992+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.993+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.993+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.995+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.995+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.995+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.996+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.996+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:19.998+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.998+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.998+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:19.999+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:19.999+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.000+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.000+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.001+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.002+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.002+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.004+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.004+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.004+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.005+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.005+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.006+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.006+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.007+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.007+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.008+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.009+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.009+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.009+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.010+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.010+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.011+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.012+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.012+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.012+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.013+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.014+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.014+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.015+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.015+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.016+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.017+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.017+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.017+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.018+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.018+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.020+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.020+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.020+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.021+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.021+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.023+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.023+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.023+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.024+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.025+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.026+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.027+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.027+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.028+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.028+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.029+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.030+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.030+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.030+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.031+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.032+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.032+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.032+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.033+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.033+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.034+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.034+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.035+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.035+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.036+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.037+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.037+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.037+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.038+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.038+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.039+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.039+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.039+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.040+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.040+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.042+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.042+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.042+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.043+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.044+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.044+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.044+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.045+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.046+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.047+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.047+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.047+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.048+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.048+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.049+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.050+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.050+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.051+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.051+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.052+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.052+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.053+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.053+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.054+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.054+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.055+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.055+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.056+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.056+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.057+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.058+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.058+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.058+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.059+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.060+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.060+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.060+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.062+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.062+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.063+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.063+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.063+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.064+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.065+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.065+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.066+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.066+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.067+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.067+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.068+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.069+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.070+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.070+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.070+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.070+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.072+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.072+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.072+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.073+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.073+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.073+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.075+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.075+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.076+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.076+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.077+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.077+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.078+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.078+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.079+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.079+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.080+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.080+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.082+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.082+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.083+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.083+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.084+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.084+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.086+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.086+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.086+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.087+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.087+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.089+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.089+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.089+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.089+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.090+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.090+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.092+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.092+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.093+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.094+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.095+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.096+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.097+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.097+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.098+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.098+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.100+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.100+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.100+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.101+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.101+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.103+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.103+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.103+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.104+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.104+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.106+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.106+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.106+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.106+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.107+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.108+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.109+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.109+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.110+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.110+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.111+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.112+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.112+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.112+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.113+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.114+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.114+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.115+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.115+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.116+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.117+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.117+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.117+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.118+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.118+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.120+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.120+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.120+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.121+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.121+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.123+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.123+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.123+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.123+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.124+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.124+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.126+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.126+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.126+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.127+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.127+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.128+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.128+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.128+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.130+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.130+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.131+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.131+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.131+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.133+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.133+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.135+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.135+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.136+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.136+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.138+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.139+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.140+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.questions
+        (correct_text_answer, question_group_id, question_type, text) 
+    values
+        (?, ?, ?, ?)
+2025-02-11T10:00:20.141+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.141+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.141+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.answers
+        (is_correct, question_id, text) 
+    values
+        (?, ?, ?)
+2025-02-11T10:00:20.144+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.144+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] org.hibernate.SQL                        : 
+    insert 
+    into
+        public.ordered_answers
+        (question_id, ordered_item) 
+    values
+        (?, ?)
+2025-02-11T10:00:20.152+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json, application/yaml]
+2025-02-11T10:00:20.152+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing ["Вопросы успешно загружены."]
+2025-02-11T10:00:20.154+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 200 OK
+2025-02-11T10:00:20.154+08:00 DEBUG 20868 --- [exmdirect_new] [http-nio-8081-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2025-02-11T10:06:38.520+08:00  INFO 20868 --- [exmdirect_new] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-11T10:06:38.547+08:00  INFO 20868 --- [exmdirect_new] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-11T10:06:38.551+08:00  INFO 20868 --- [exmdirect_new] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-02-11T10:06:38.554+08:00  INFO 20868 --- [exmdirect_new] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-11T10:06:38.555+08:00  INFO 20868 --- [exmdirect_new] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

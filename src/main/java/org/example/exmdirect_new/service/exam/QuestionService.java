@@ -41,7 +41,10 @@ public class QuestionService {
     public void deleteQuestion(Long id) {
         questionRepository.deleteById(id);
     }
-
+    // Удаление всех вопросов по ID группы
+    public void deleteAllQuestions(Long groupId) {
+        questionRepository.deleteByQuestionGroupId(groupId);
+    }
     // Сохранение группы вопросов
     public QuestionGroup createQuestionGroup(QuestionGroup group) {
         return questionGroupRepository.save(group);
@@ -78,6 +81,11 @@ public class QuestionService {
             // Сохраняем вопросы
             for (Question question : questions) {
                 System.out.println("Добавление вопроса: " + question.getText());
+
+                if (question.getCorrectTextAnswer() == null || question.getCorrectTextAnswer().isEmpty()) {
+                    throw new IllegalArgumentException("Ошибка: У вопроса '" + question.getText() + "' нет правильного ответа.");
+                }
+
                 question.setQuestionGroup(group);
                 questionRepository.save(question);
             }

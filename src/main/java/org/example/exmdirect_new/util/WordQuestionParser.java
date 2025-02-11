@@ -20,6 +20,7 @@ public class WordQuestionParser {
 
             Question currentQuestion = null;
             boolean expectingAnswers = false;
+            List<String> correctAnswers = new ArrayList<>(); // ✅ Список для хранения правильных ответов
 
             for (XWPFParagraph paragraph : paragraphs) {
                 String text = paragraph.getText().trim();
@@ -31,22 +32,37 @@ public class WordQuestionParser {
                 }
 
                 if (!expectingAnswers) {
-                    // Новая строка без пустых строк сверху — это вопрос
+                    // Новый вопрос
                     if (currentQuestion != null) {
+                        // Если вопрос был SINGLE_CHOICE, сохраняем единственный правильный ответ
+                        if (currentQuestion.getQuestionType() == QuestionType.SINGLE_CHOICE && !correctAnswers.isEmpty()) {
+                            currentQuestion.setCorrectTextAnswer(correctAnswers.get(0));
+                        }
+                        // Если вопрос MULTIPLE_CHOICE, сохраняем список правильных ответов как строку
+                        else if (currentQuestion.getQuestionType() == QuestionType.MULTIPLE_CHOICE && !correctAnswers.isEmpty()) {
+                            currentQuestion.setCorrectTextAnswer(String.join(", ", correctAnswers));
+                        }
+
                         questions.add(currentQuestion);
                     }
+
                     currentQuestion = new Question();
                     currentQuestion.setText(text);
-                    currentQuestion.setAnswers(new ArrayList<>()); // ✅ Инициализируем список ответов
+                    currentQuestion.setAnswers(new ArrayList<>());
+                    correctAnswers.clear(); // ✅ Очищаем правильные ответы для нового вопроса
                     expectingAnswers = true;
                 } else if (currentQuestion != null) {
                     // Это строка с ответами
                     if (text.startsWith("*")) {
                         currentQuestion.setQuestionType(QuestionType.SINGLE_CHOICE);
-                        currentQuestion.getAnswers().add(new Answer(text.substring(1).trim(), true));
+                        String answerText = text.substring(1).trim();
+                        currentQuestion.getAnswers().add(new Answer(answerText, true));
+                        correctAnswers.add(answerText); // ✅ Добавляем правильный ответ
                     } else if (text.startsWith("#")) {
                         currentQuestion.setQuestionType(QuestionType.MULTIPLE_CHOICE);
-                        currentQuestion.getAnswers().add(new Answer(text.substring(1).trim(), true));
+                        String answerText = text.substring(1).trim();
+                        currentQuestion.getAnswers().add(new Answer(answerText, true));
+                        correctAnswers.add(answerText); // ✅ Добавляем правильный ответ
                     } else if (text.startsWith("[") && text.endsWith("]")) {
                         currentQuestion.setQuestionType(QuestionType.FREE_TEXT);
                         currentQuestion.setCorrectTextAnswer(text.substring(1, text.length() - 1).trim());
@@ -56,18 +72,14 @@ public class WordQuestionParser {
                         String key = pair[0].trim();
                         String value = pair.length > 1 ? pair[1].trim() : "";
 
-                        // ✅ Проверяем, что список не `null`, и инициализируем его
                         if (currentQuestion.getMatchingPairs() == null) {
                             currentQuestion.setMatchingPairs(new ArrayList<>());
                         }
                         currentQuestion.getMatchingPairs().add(new MatchingPair(key, value));
                     } else {
-                        // Если тип еще не определен — устанавливаем "упорядочивание"
                         if (currentQuestion.getQuestionType() == null) {
                             currentQuestion.setQuestionType(QuestionType.ORDERING);
                         }
-
-                        // ✅ Проверяем, что список `orderedAnswers` не `null`
                         if (currentQuestion.getOrderedAnswers() == null) {
                             currentQuestion.setOrderedAnswers(new ArrayList<>());
                         }
@@ -76,8 +88,14 @@ public class WordQuestionParser {
                 }
             }
 
-            // Добавляем последний вопрос в список
+            // Добавляем последний вопрос
             if (currentQuestion != null) {
+                if (currentQuestion.getQuestionType() == QuestionType.SINGLE_CHOICE && !correctAnswers.isEmpty()) {
+                    currentQuestion.setCorrectTextAnswer(correctAnswers.get(0));
+                } else if (currentQuestion.getQuestionType() == QuestionType.MULTIPLE_CHOICE && !correctAnswers.isEmpty()) {
+                    currentQuestion.setCorrectTextAnswer(String.join(", ", correctAnswers));
+                }
+
                 questions.add(currentQuestion);
             }
         }
