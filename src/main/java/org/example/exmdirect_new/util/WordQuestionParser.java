@@ -1,104 +1,145 @@
 package org.example.exmdirect_new.util;
 
 import org.apache.poi.xwpf.usermodel.*;
-import org.apache.poi.xwpf.usermodel.XWPFDocument;
-import org.apache.poi.xwpf.usermodel.XWPFParagraph;
 import org.example.exmdirect_new.entity.exam.*;
 
 import java.io.InputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class WordQuestionParser {
 
     public static List<Question> parseQuestionsFromWord(InputStream inputStream) throws IOException {
         List<Question> questions = new ArrayList<>();
+        List<String> skippedQuestions = new ArrayList<>();
+        Set<String> questionTexts = new HashSet<>();
 
         try (XWPFDocument document = new XWPFDocument(inputStream)) {
             List<XWPFParagraph> paragraphs = document.getParagraphs();
 
             Question currentQuestion = null;
+            List<String> correctAnswers = new ArrayList<>();
+            List<String> orderedAnswers = new ArrayList<>();
+            List<MatchingPair> matchingPairs = new ArrayList<>();
             boolean expectingAnswers = false;
-            List<String> correctAnswers = new ArrayList<>(); // ✅ Список для хранения правильных ответов
 
             for (XWPFParagraph paragraph : paragraphs) {
                 String text = paragraph.getText().trim();
 
-                // Пропускаем пустые строки
                 if (text.isEmpty()) {
+                    if (currentQuestion != null) {
+                        finalizeQuestion(currentQuestion, correctAnswers, orderedAnswers, matchingPairs, skippedQuestions, questions, questionTexts);
+                    }
+                    currentQuestion = null;
+                    correctAnswers.clear();
+                    orderedAnswers.clear();
+                    matchingPairs.clear();
                     expectingAnswers = false;
                     continue;
                 }
 
                 if (!expectingAnswers) {
-                    // Новый вопрос
-                    if (currentQuestion != null) {
-                        // Если вопрос был SINGLE_CHOICE, сохраняем единственный правильный ответ
-                        if (currentQuestion.getQuestionType() == QuestionType.SINGLE_CHOICE && !correctAnswers.isEmpty()) {
-                            currentQuestion.setCorrectTextAnswer(correctAnswers.get(0));
-                        }
-                        // Если вопрос MULTIPLE_CHOICE, сохраняем список правильных ответов как строку
-                        else if (currentQuestion.getQuestionType() == QuestionType.MULTIPLE_CHOICE && !correctAnswers.isEmpty()) {
-                            currentQuestion.setCorrectTextAnswer(String.join(", ", correctAnswers));
-                        }
-
-                        questions.add(currentQuestion);
-                    }
-
                     currentQuestion = new Question();
                     currentQuestion.setText(text);
                     currentQuestion.setAnswers(new ArrayList<>());
-                    correctAnswers.clear(); // ✅ Очищаем правильные ответы для нового вопроса
                     expectingAnswers = true;
                 } else if (currentQuestion != null) {
-                    // Это строка с ответами
                     if (text.startsWith("*")) {
                         currentQuestion.setQuestionType(QuestionType.SINGLE_CHOICE);
                         String answerText = text.substring(1).trim();
                         currentQuestion.getAnswers().add(new Answer(answerText, true));
-                        correctAnswers.add(answerText); // ✅ Добавляем правильный ответ
+                        correctAnswers.add(answerText);
                     } else if (text.startsWith("#")) {
                         currentQuestion.setQuestionType(QuestionType.MULTIPLE_CHOICE);
                         String answerText = text.substring(1).trim();
                         currentQuestion.getAnswers().add(new Answer(answerText, true));
-                        correctAnswers.add(answerText); // ✅ Добавляем правильный ответ
+                        correctAnswers.add(answerText);
                     } else if (text.startsWith("[") && text.endsWith("]")) {
                         currentQuestion.setQuestionType(QuestionType.FREE_TEXT);
-                        currentQuestion.setCorrectTextAnswer(text.substring(1, text.length() - 1).trim());
-                    } else if (text.contains("=")) {
-                        currentQuestion.setQuestionType(QuestionType.MATCHING);
-                        String[] pair = text.split("=", 2);
-                        String key = pair[0].trim();
-                        String value = pair.length > 1 ? pair[1].trim() : "";
-
-                        if (currentQuestion.getMatchingPairs() == null) {
-                            currentQuestion.setMatchingPairs(new ArrayList<>());
+                        String answerText = text.substring(1, text.length() - 1).trim();
+                        correctAnswers.add(answerText.toLowerCase());
+                        if (answerText.matches("[0-9]+[.,]?[0-9]*")) {
+                            correctAnswers.add(answerText.replace(",", "."));
+                            correctAnswers.add(answerText.replace(".", ","));
                         }
-                        currentQuestion.getMatchingPairs().add(new MatchingPair(key, value));
-                    } else {
-                        if (currentQuestion.getQuestionType() == null) {
+                        currentQuestion.setCorrectTextAnswer(String.join(" | ", correctAnswers));
+                    } else if (text.contains("==") || text.contains("--") || text.contains("=")) {
+                        currentQuestion.setQuestionType(QuestionType.MATCHING);
+                        String[] pair = text.split("==|--|=", 2);
+                        if (pair.length == 2) {
+                            matchingPairs.add(new MatchingPair(pair[0].trim(), pair[1].trim()));
+                        }
+                    } else if (!text.startsWith("*") && !text.startsWith("#") && !text.startsWith("[") && !text.endsWith("]")) {
+                        if (currentQuestion.getQuestionType() == null || currentQuestion.getQuestionType() == QuestionType.MATCHING) {
                             currentQuestion.setQuestionType(QuestionType.ORDERING);
                         }
-                        if (currentQuestion.getOrderedAnswers() == null) {
-                            currentQuestion.setOrderedAnswers(new ArrayList<>());
-                        }
-                        currentQuestion.getOrderedAnswers().add(text.trim());
+                        orderedAnswers.add(text);
                     }
                 }
             }
 
-            // Добавляем последний вопрос
             if (currentQuestion != null) {
-                if (currentQuestion.getQuestionType() == QuestionType.SINGLE_CHOICE && !correctAnswers.isEmpty()) {
-                    currentQuestion.setCorrectTextAnswer(correctAnswers.get(0));
-                } else if (currentQuestion.getQuestionType() == QuestionType.MULTIPLE_CHOICE && !correctAnswers.isEmpty()) {
-                    currentQuestion.setCorrectTextAnswer(String.join(", ", correctAnswers));
-                }
-
-                questions.add(currentQuestion);
+                finalizeQuestion(currentQuestion, correctAnswers, orderedAnswers, matchingPairs, skippedQuestions, questions, questionTexts);
             }
         }
+
+        System.out.println("Пропущенные вопросы без правильного ответа:");
+        for (String question : skippedQuestions) {
+            System.out.println("- " + question);
+        }
+
         return questions;
     }
+
+    private static void finalizeQuestion(Question question, List<String> correctAnswers, List<String> orderedAnswers, List<MatchingPair> matchingPairs, List<String> skippedQuestions, List<Question> questions, Set<String> questionTexts) {
+        if (questionTexts.contains(question.getText())) {
+            System.out.println("Дублирующийся вопрос пропущен: " + question.getText());
+            return;
+        }
+
+        if (question.getQuestionType() == QuestionType.SINGLE_CHOICE && !correctAnswers.isEmpty()) {
+            question.setCorrectTextAnswer(correctAnswers.get(0));
+            questions.add(question);
+            questionTexts.add(question.getText());
+        } else if (question.getQuestionType() == QuestionType.MULTIPLE_CHOICE && !correctAnswers.isEmpty()) {
+            question.setCorrectTextAnswer(String.join(", ", correctAnswers));
+            questions.add(question);
+            questionTexts.add(question.getText());
+        } else if (question.getQuestionType() == QuestionType.FREE_TEXT) {
+            if (correctAnswers.isEmpty()) {
+                question.setCorrectTextAnswer("Ответ вводится с клавиатуры");
+            }
+            questions.add(question);
+            questionTexts.add(question.getText());
+        } else if (question.getQuestionType() == QuestionType.MATCHING) {
+            if (!matchingPairs.isEmpty()) {
+                question.setMatchingPairs(matchingPairs);
+                question.setCorrectTextAnswer(formatMatchingPairs(matchingPairs));
+                questions.add(question);
+                questionTexts.add(question.getText());
+            } else {
+                skippedQuestions.add(question.getText() + " (не найдены пары соответствий)");
+            }
+        } else if (question.getQuestionType() == QuestionType.ORDERING) {
+            if (!orderedAnswers.isEmpty()) {
+                question.setOrderedAnswers(orderedAnswers);
+                question.setCorrectTextAnswer(String.join(" -> ", orderedAnswers));
+                questions.add(question);
+                questionTexts.add(question.getText());
+            } else {
+                skippedQuestions.add(question.getText() + " (не найдены варианты для упорядочивания)");
+            }
+        } else {
+            skippedQuestions.add(question.getText() + " (не найден правильный ответ)");
+        }
+    }
+
+    private static String formatMatchingPairs(List<MatchingPair> pairs) {
+        List<String> formattedPairs = new ArrayList<>();
+        for (MatchingPair pair : pairs) {
+            formattedPairs.add(pair.getFixedPart() + " == " + pair.getMatchingAnswer());
+        }
+        return String.join("; ", formattedPairs);
+    }
 }
+

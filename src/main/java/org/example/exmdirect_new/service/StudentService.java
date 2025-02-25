@@ -7,7 +7,6 @@ import org.example.exmdirect_new.entity.SchoolClass;
 import org.example.exmdirect_new.entity.Student;
 import org.example.exmdirect_new.entity.UserRole;
 import org.example.exmdirect_new.repository.StudentRepository;
-import org.example.exmdirect_new.util.PasswordValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +26,7 @@ public class StudentService {
     private final StudentRepository studentRepository;
     private final SchoolClassService schoolClassService;
     private final BCryptPasswordEncoder passwordEncoder;
+    private final SecureRandom random = new SecureRandom();
 
     @Autowired
     public StudentService(StudentRepository studentRepository,
@@ -34,177 +34,128 @@ public class StudentService {
                           BCryptPasswordEncoder passwordEncoder) {
         this.studentRepository = studentRepository;
         this.schoolClassService = schoolClassService;
-        this.passwordEncoder = passwordEncoder; // Инициализация passwordEncoder через @Autowired
+        this.passwordEncoder = passwordEncoder;
     }
 
-    // Получить список студентов, которых обучает определённый учитель
     public List<Student> getStudentsByTeacherId(Long teacherId) {
         return studentRepository.findStudentsByTeacherId(teacherId);
     }
 
-    // Получить всех студентов
     public List<Student> getAllStudents() {
         return studentRepository.findAll();
     }
 
-    // Импорт студентов из Excel (xls, xlsx)
     public void importStudentsFromExcel(MultipartFile file) throws IOException {
         if (file.isEmpty()) {
             throw new IllegalArgumentException("Файл пустой. Загрузите корректный файл.");
         }
 
-        String filename = file.getOriginalFilename();
-        if (filename == null || (!filename.endsWith(".xls") && !filename.endsWith(".xlsx"))) {
-            throw new IllegalArgumentException("Файл должен быть формата .xls или .xlsx");
-        }
+        Workbook workbook = file.getOriginalFilename().endsWith(".xls")
+                ? new HSSFWorkbook(file.getInputStream())
+                : new XSSFWorkbook(file.getInputStream());
 
-        Workbook workbook = null;
-        try {
-            workbook = filename.endsWith(".xls")
-                    ? new HSSFWorkbook(file.getInputStream())
-                    : new XSSFWorkbook(file.getInputStream());
+        Sheet sheet = workbook.getSheetAt(0);
+        List<Student> students = new ArrayList<>();
 
-            if (workbook.getNumberOfSheets() == 0) {
-                throw new IllegalArgumentException("Файл не содержит листов.");
+        for (int i = 1; i <= sheet.getLastRowNum(); i++) {
+            Row row = sheet.getRow(i);
+            if (row == null || row.getCell(1) == null || row.getCell(1).getCellType() == CellType.BLANK) {
+                logger.warn("Пропускаем строку {} из-за отсутствия данных", i + 1);
+                continue;
             }
 
-            Sheet sheet = workbook.getSheetAt(0);
-            if (sheet.getPhysicalNumberOfRows() == 0) {
-                throw new IllegalArgumentException("Файл не содержит данных.");
+            String fullName = readCellAsString(row.getCell(1));
+            if (fullName.isEmpty()) {
+                logger.warn("Пропускаем строку {} из-за пустого имени", i + 1);
+                continue;
             }
 
-            Row headerRow = sheet.getRow(0);
-            if (headerRow == null || headerRow.getCell(2) == null) {
-                throw new IllegalArgumentException("Отсутствует заголовок класса в C1.");
-            }
+            String[] parsedName = parseFullName(fullName);
+            String firstName = parsedName[0];
+            String lastName = parsedName[1];
 
-            String classInfo = headerRow.getCell(2).getStringCellValue();
-            if (classInfo == null || !classInfo.contains(":")) {
-                throw new IllegalArgumentException("Неверный формат заголовка в C1 (должен содержать ':').");
-            }
-
-            String className = classInfo.split(":")[0].trim();
+            String className = readCellAsString(row.getCell(2)).trim();
             SchoolClass schoolClass = schoolClassService.getAllClasses().stream()
                     .filter(c -> c.getName().equals(className))
                     .findFirst()
                     .orElseGet(() -> schoolClassService.saveClass(new SchoolClass(className, null)));
 
-            List<Student> students = new ArrayList<>();
-            SecureRandom random = new SecureRandom();
-
-            for (int i = 1; i <= sheet.getLastRowNum(); i++) {
-                Row row = sheet.getRow(i);
-                if (row == null) {
-                    logger.warn("Пустая строка. Пропускаем строку {}", i + 1);
-                    continue;
-                }
-
-                Cell nameCell = row.getCell(1);
-                if (nameCell == null || nameCell.getCellType() == CellType.BLANK) {
-                    logger.warn("Пустое поле имени. Пропускаем строку {}", i + 1);
-                    continue;
-                }
-
-                String fullName = nameCell.getStringCellValue().trim();
-                if (fullName.isEmpty()) {
-                    logger.warn("Пустое поле ФИО. Пропускаем строку {}", i + 1);
-                    continue;
-                }
-
-                try {
-                    String[] parsedName = parseFullName(fullName);
-                    String firstName = parsedName[0];
-                    String lastName = parsedName[1];
-
-                    String login = generateLogin(firstName, lastName);
-
-                    // Проверяем, существует ли студент с таким же именем, фамилией и логином
-                    if (studentRepository.existsByFirstNameAndLastNameAndLogin(firstName, lastName, login)) {
-                        logger.warn("Дублирующий студент {} {} с логином {} уже существует. Пропускаем строку {}", firstName, lastName, login, i + 1);
-                        continue;
-                    }
-
-                    Student student = Student.builder()
-                            .firstName(firstName)
-                            .lastName(lastName)
-                            .login(login)
-                            .password(new BCryptPasswordEncoder().encode("defaultPassword"))
-                            .userRole(UserRole.STUDENT)
-                            .schoolClass(schoolClass)
-                            .build();
-                    students.add(student);
-                } catch (IllegalArgumentException e) {
-                    logger.error("Ошибка в строке {}: {}", i + 1, e.getMessage());
-                }
+            if (studentRepository.existsByFirstNameAndLastNameAndSchoolClassId(firstName, lastName, schoolClass.getId())) {
+                logger.warn("Студент {} {} уже существует в классе {}. Пропускаем строку {}", firstName, lastName, className, i + 1);
+                continue;
             }
 
-            if (!students.isEmpty()) {
-                studentRepository.saveAll(students);
-                logger.info("Загружено {} студентов.", students.size());
-            } else {
-                throw new IllegalArgumentException("Файл не содержит корректных записей.");
-            }
-        } finally {
-            if (workbook != null) {
-                workbook.close();
-            }
+            String login = generateLogin(schoolClass);
+
+            Student student = Student.builder()
+                    .firstName(firstName)
+                    .lastName(lastName)
+                    .login(login)
+                    .password(passwordEncoder.encode("defaultPassword"))
+                    .userRole(UserRole.STUDENT)
+                    .schoolClass(schoolClass)
+                    .build();
+            students.add(student);
         }
+
+        if (!students.isEmpty()) {
+            studentRepository.saveAll(students);
+            logger.info("Загружено {} студентов.", students.size());
+        }
+
+        workbook.close();
     }
 
-    // Метод для генерации логина
-    private String generateLogin(String firstName, String lastName) {
-        return (firstName.toLowerCase() + "." + lastName.toLowerCase()).replaceAll("[^a-zа-я0-9.]", "");
+    private String readCellAsString(Cell cell) {
+        if (cell == null) return "";
+        return switch (cell.getCellType()) {
+            case STRING -> cell.getStringCellValue().trim();
+            case NUMERIC -> String.valueOf((int) cell.getNumericCellValue());
+            case BOOLEAN -> String.valueOf(cell.getBooleanCellValue());
+            default -> "";
+        };
     }
 
-    // Метод для разбора полного имени
+    private String generateLogin(SchoolClass schoolClass) {
+        int classNumber = extractClassNumber(schoolClass.getName());
+        String login;
+        do {
+            int randomDigits = 1000 + random.nextInt(9000);
+            login = "User" + classNumber + randomDigits;
+        } while (studentRepository.findByLogin(login).isPresent());
+        return login;
+    }
+
+    private int extractClassNumber(String className) {
+        String digits = className.replaceAll("\\D", "");
+        return digits.isEmpty() ? 0 : Integer.parseInt(digits);
+    }
+
     private String[] parseFullName(String fullName) {
         fullName = fullName.trim();
-
-        // Разбиваем на части
         String[] parts = fullName.split("\\s+");
         if (parts.length < 2) {
             throw new IllegalArgumentException("Неверный формат имени: " + fullName);
         }
-
-        String firstName = parts[0]; // Первое слово — имя
-        String lastName = parts[1];  // Второе слово — фамилия
-
-        // Проверяем, если фамилия содержит монгольское окончание "-гийн", "-ын", "-ийн"
-        if (lastName.matches(".*(гийн|ын|ийн|н)$") && parts.length > 2) {
-            lastName = String.join(" ", Arrays.copyOfRange(parts, 1, parts.length)); // Фамилия состоит из нескольких слов
-        }
-
-        return new String[]{firstName, lastName};
+        return new String[]{parts[0], parts[1]};
     }
 
     public void deleteAll() {
         studentRepository.deleteAll();
     }
 
-    // **5. Смена логина (почты) и пароля при первом входе**
-    public String updateLoginAndPassword(Long studentId, String newEmail, String newPassword) {
+    public String updateEmail(Long studentId, String newEmail) {
         Optional<Student> studentOpt = studentRepository.findById(studentId);
         if (studentOpt.isEmpty()) {
             return "Студент не найден";
         }
-
         Student student = studentOpt.get();
-
-        // Проверка валидности пароля
-        if (!PasswordValidator.isValidPassword(newPassword)) {
-            return "Пароль не соответствует требованиям";
-        }
-
-        // Проверка уникальности email (логина)
         if (studentRepository.findByLogin(newEmail).isPresent()) {
             return "Этот email уже используется";
         }
-
         student.setLogin(newEmail);
         student.setEmail(newEmail);
-        student.setPassword(passwordEncoder.encode(newPassword));
         studentRepository.save(student);
-        return "Логин (email) и пароль успешно обновлены";
+        return "Email успешно обновлен";
     }
-
 }

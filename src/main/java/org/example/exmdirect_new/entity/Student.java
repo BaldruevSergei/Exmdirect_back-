@@ -16,7 +16,7 @@ import lombok.experimental.SuperBuilder;
 public class Student extends User {
 
     @ManyToOne
-    @JoinColumn(name = "school_class_id", nullable = false)
+    @JoinColumn(name = "school_class_id")
     private SchoolClass schoolClass; // связь с классом
     // Явный конструктор
     public Student(Long id, String firstName, String lastName, String login, String password, String email, UserRole userRole, SchoolClass schoolClass) {

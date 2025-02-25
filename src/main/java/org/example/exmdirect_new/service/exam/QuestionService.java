@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class QuestionService {
@@ -41,10 +42,12 @@ public class QuestionService {
     public void deleteQuestion(Long id) {
         questionRepository.deleteById(id);
     }
+
     // Удаление всех вопросов по ID группы
     public void deleteAllQuestions(Long groupId) {
         questionRepository.deleteByQuestionGroupId(groupId);
     }
+
     // Сохранение группы вопросов
     public QuestionGroup createQuestionGroup(QuestionGroup group) {
         return questionGroupRepository.save(group);
@@ -54,7 +57,6 @@ public class QuestionService {
     public List<QuestionGroup> getAllQuestionGroups() {
         return questionGroupRepository.findAll();
     }
-
 
     // Загрузка вопросов из файла Word
     public void uploadQuestionsFromFile(MultipartFile file, Long groupId) throws IOException {
@@ -78,12 +80,19 @@ public class QuestionService {
 
             System.out.println("Группа найдена: " + group.getName());
 
-            // Сохраняем вопросы
+            // Сохраняем вопросы, проверяя на дубликаты по ID
             for (Question question : questions) {
                 System.out.println("Добавление вопроса: " + question.getText());
 
                 if (question.getCorrectTextAnswer() == null || question.getCorrectTextAnswer().isEmpty()) {
                     throw new IllegalArgumentException("Ошибка: У вопроса '" + question.getText() + "' нет правильного ответа.");
+                }
+
+                // Проверяем, существует ли уже вопрос с таким текстом в базе
+                Optional<Question> existingQuestion = questionRepository.findByTextAndQuestionGroupId(question.getText(), groupId);
+                if (existingQuestion.isPresent()) {
+                    System.out.println("Пропуск дублирующегося вопроса: " + question.getText());
+                    continue;
                 }
 
                 question.setQuestionGroup(group);
