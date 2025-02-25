@@ -26,7 +26,7 @@ public interface StudentRepository extends AbstractUserRepository<Student> {
 
     List<String> findAllLogins();
 
-    boolean existsByFirstNameAndLastNameAndLogin(String firstName, String lastName, String login);
 
 
+    boolean existsByFirstNameAndLastNameAndSchoolClassId(String firstName, String lastName, Long id);
 }

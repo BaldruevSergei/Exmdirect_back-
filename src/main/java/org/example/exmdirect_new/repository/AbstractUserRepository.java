@@ -18,4 +18,5 @@ public interface AbstractUserRepository<T extends User> extends JpaRepository<T,
     Optional<T> findByLogin(String login);
 
     List<T> findByFirstNameAndLastName(String firstName, String lastName);
+
 }
