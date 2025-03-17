@@ -65,4 +65,11 @@ public class StudentController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Произошла ошибка при загрузке файла.");
         }
     }
+
+    @GetMapping("/class/{className}")
+    public ResponseEntity<List<Student>> getStudentsByClass(@PathVariable String className) {
+        List<Student> students = studentService.getStudentsByClass(className);
+        return ResponseEntity.ok(students);
+    }
+
 }

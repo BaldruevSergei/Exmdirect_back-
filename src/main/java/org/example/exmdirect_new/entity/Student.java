@@ -23,4 +23,8 @@ public class Student extends User {
         super(id, firstName, lastName, login, password, email, userRole); // Вызов конструктора суперкласса
         this.schoolClass = schoolClass;
     }
+    public SchoolClass getSchoolClass() {
+        return schoolClass;
+    }
+
 }

@@ -158,4 +158,9 @@ public class StudentService {
         studentRepository.save(student);
         return "Email успешно обновлен";
     }
+
+    public List<Student> getStudentsByClass(String className) {
+        return studentRepository.findBySchoolClass_Name(className);
+    }
+
 }

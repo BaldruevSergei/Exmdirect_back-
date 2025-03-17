@@ -12,7 +12,8 @@ import java.util.List;
 public interface StudentRepository extends AbstractUserRepository<Student> {
 
     // Поиск студентов по классу
-    List<Student> findBySchoolClass_Id(Long classId);
+    List<Student> findBySchoolClass_Name(String className);
+
 
     // Поиск студентов, которых обучает конкретный учитель
     @Query("""
