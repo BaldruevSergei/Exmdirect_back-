@@ -66,6 +66,12 @@ public class StudentController {
         }
     }
 
+    @PostMapping
+    public ResponseEntity<Student> createStudent(@RequestBody Student student) {
+        Student savedStudent = studentService.createStudent(student);
+        return ResponseEntity.ok(savedStudent);
+    }
+
     @GetMapping("/class/{className}")
     public ResponseEntity<List<Student>> getStudentsByClass(@PathVariable String className) {
         List<Student> students = studentService.getStudentsByClass(className);

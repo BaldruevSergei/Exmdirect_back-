@@ -12,7 +12,9 @@ import java.util.List;
 public interface StudentRepository extends AbstractUserRepository<Student> {
 
     // Поиск студентов по классу
-    List<Student> findBySchoolClass_Name(String className);
+    @Query("SELECT s FROM Student s JOIN s.schoolClass sc WHERE TRIM(LOWER(sc.name)) = TRIM(LOWER(:className))")
+    List<Student> findBySchoolClassName(@Param("className") String className);
+
 
 
     // Поиск студентов, которых обучает конкретный учитель

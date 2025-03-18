@@ -6,6 +6,7 @@ import org.example.exmdirect_new.repository.exam.ExamRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -17,17 +18,31 @@ public class ExamService {
         this.examRepository = examRepository;
     }
 
-    // Получить все экзамены
-    public List<ExamDTO> getAllExams() {
-        return examRepository.findAll().stream()
-                .map(ExamDTO::new)  // Преобразуем в DTO
-                .collect(Collectors.toList());
+    // Создание нового экзамена
+    public Exam createExam(Exam exam) {
+        return examRepository.save(exam);
     }
 
-    // Получить экзамены по subjectId
+    // Получить все экзамены (возвращаем DTO)
+    public List<Exam> getAllExams() {
+        return examRepository.findAll();
+    }
+
+
+    // Получить экзамен по ID
+    public Optional<Exam> getExamById(Long id) {
+        return examRepository.findById(id);
+    }
+
+    // Получить экзамены по предмету
     public List<ExamDTO> getExamsBySubject(Long subjectId) {
         return examRepository.findBySubjectId(subjectId).stream()
                 .map(ExamDTO::new)
                 .collect(Collectors.toList());
+    }
+
+    // Удаление экзамена по ID
+    public void deleteExam(Long id) {
+        examRepository.deleteById(id);
     }
 }

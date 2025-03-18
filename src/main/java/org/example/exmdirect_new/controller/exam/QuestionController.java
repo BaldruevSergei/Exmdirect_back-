@@ -1,9 +1,7 @@
 package org.example.exmdirect_new.controller.exam;
 
 import io.swagger.v3.oas.annotations.Operation;
-import org.example.exmdirect_new.entity.exam.ExamDTO;
-import org.example.exmdirect_new.entity.exam.QuestionDTO;
-import org.example.exmdirect_new.entity.exam.SubjectDTO;
+import org.example.exmdirect_new.entity.exam.*;
 import org.example.exmdirect_new.repository.exam.SubjectRepository;
 import org.example.exmdirect_new.service.exam.ExamService;
 import org.example.exmdirect_new.service.exam.QuestionService;
@@ -28,17 +26,10 @@ public class QuestionController {
         this.questionService = questionService;
         this.subjectRepository = subjectRepository;
         this.examService = examService;
-
     }
 
-
-
     /**
-     * Загрузка вопросов из файла Word и сохранение в указанную группу вопросов.
-     *
-     * @param file   Файл с вопросами в формате Word.
-     * @param groupId ID группы вопросов.
-     * @return Статус выполнения операции.
+     * 📌 Загрузка вопросов из файла Word
      */
     @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @Operation(summary = "Загрузка вопросов из файла Word")
@@ -58,12 +49,8 @@ public class QuestionController {
         }
     }
 
-
     /**
-     * Получить все вопросы по ID группы.
-     *
-     * @param groupId ID группы вопросов.
-     * @return Список вопросов.
+     * 📌 Получение всех вопросов по ID группы.
      */
     @GetMapping("/group/{groupId}")
     public ResponseEntity<List<QuestionDTO>> getQuestionsByGroup(@PathVariable Long groupId) {
@@ -78,13 +65,8 @@ public class QuestionController {
         }
     }
 
-
-
     /**
-     * Удаление вопроса по ID.
-     *
-     * @param questionId ID вопроса.
-     * @return Статус выполнения операции.
+     * 📌 Удаление одного вопроса по ID.
      */
     @DeleteMapping("/{questionId}")
     public ResponseEntity<String> deleteQuestion(@PathVariable Long questionId) {
@@ -95,6 +77,10 @@ public class QuestionController {
             return ResponseEntity.badRequest().body("Ошибка: " + e.getMessage());
         }
     }
+
+    /**
+     * 📌 Удаление всех вопросов по ID группы.
+     */
     @DeleteMapping("/group/{groupId}/deleteAll")
     public ResponseEntity<String> deleteAllQuestions(@PathVariable Long groupId) {
         try {
@@ -105,7 +91,9 @@ public class QuestionController {
         }
     }
 
-
+    /**
+     * 📌 Получить список всех предметов.
+     */
     @GetMapping("/subjects")
     public List<SubjectDTO> getSubjects() {
         return subjectRepository.findAll().stream()
@@ -113,19 +101,27 @@ public class QuestionController {
                 .collect(Collectors.toList());
     }
 
-    // Получить все экзамены
+    /**
+     * 📌 Получить все экзамены.
+     */
     @GetMapping("/exams")
-    public ResponseEntity<List<ExamDTO>> getExams() {
-        List<ExamDTO> exams = examService.getAllExams();
+    public ResponseEntity<List<Exam>> getExams() {
+        List<Exam> exams = examService.getAllExams();
         return ResponseEntity.ok(exams);
     }
 
-    // Получить экзамены по subjectId
+    /**
+     * 📌 Получить экзамены по ID предмета.
+     */
     @GetMapping("/exams/subject/{subjectId}")
     public ResponseEntity<List<ExamDTO>> getExamsBySubject(@PathVariable Long subjectId) {
         List<ExamDTO> exams = examService.getExamsBySubject(subjectId);
         return ResponseEntity.ok(exams);
     }
+
+    /**
+     * 📌 Получить вопросы с ответами по ID группы.
+     */
     @GetMapping("/group/{groupId}/answers")
     public ResponseEntity<List<QuestionDTO>> getQuestionsWithAnswers(@PathVariable Long groupId) {
         List<QuestionDTO> questions = questionService.getQuestionsByGroup(groupId)
@@ -135,6 +131,4 @@ public class QuestionController {
 
         return ResponseEntity.ok(questions);
     }
-
-
 }

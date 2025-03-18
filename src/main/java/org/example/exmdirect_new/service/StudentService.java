@@ -160,7 +160,11 @@ public class StudentService {
     }
 
     public List<Student> getStudentsByClass(String className) {
-        return studentRepository.findBySchoolClass_Name(className);
+        return studentRepository.findBySchoolClassName(className);
     }
+    public Student createStudent(Student student) {
+        return studentRepository.save(student);
+    }
+
 
 }

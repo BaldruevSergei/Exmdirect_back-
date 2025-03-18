@@ -140,4 +140,8 @@ public class TeacherService {
     public void deleteAll() {
         teacherRepository.deleteAll();
     }
+    public Teacher createTeacher(Teacher teacher) {
+        return teacherRepository.save(teacher);
+    }
+
 }
