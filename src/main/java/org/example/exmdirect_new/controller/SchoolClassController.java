@@ -1,6 +1,7 @@
 package org.example.exmdirect_new.controller;
 
 import org.example.exmdirect_new.entity.SchoolClass;
+import org.example.exmdirect_new.entity.Student;
 import org.example.exmdirect_new.service.SchoolClassService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -27,4 +28,11 @@ public class SchoolClassController {
     public ResponseEntity<List<SchoolClass>> getAllClasses() {
         return ResponseEntity.ok(schoolClassService.getAllClasses());
     }
+    @GetMapping("/name/{name}/students")
+    public ResponseEntity<List<Student>> getStudentsByClassName(@PathVariable String name) {
+        return schoolClassService.findByName(name)
+                .map(schoolClass -> ResponseEntity.ok(schoolClass.getStudents()))
+                .orElse(ResponseEntity.notFound().build());
+    }
+
 }

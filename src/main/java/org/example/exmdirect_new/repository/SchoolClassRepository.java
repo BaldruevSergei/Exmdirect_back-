@@ -3,6 +3,7 @@ package org.example.exmdirect_new.repository;
 
 import org.example.exmdirect_new.entity.SchoolClass;
 import org.example.exmdirect_new.entity.Teacher;
+import org.springframework.data.domain.Example;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -17,4 +18,12 @@ public interface SchoolClassRepository extends JpaRepository<SchoolClass, Long> 
 
     // Найти все классы, которые ведёт определённый классный руководитель
     List<SchoolClass> findByClassTeacher(Teacher classTeacher);
+
+    @Override
+    <S extends SchoolClass> Optional<S> findOne(Example<S> example);
+
+    // найти по имени класса
+    Optional<SchoolClass> findByName(String name);
+
+
 }

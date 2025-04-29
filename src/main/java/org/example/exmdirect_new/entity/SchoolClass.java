@@ -1,6 +1,7 @@
 package org.example.exmdirect_new.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,8 +26,10 @@ public class SchoolClass {
     @Column(nullable = false)
     private String name; // Название класса, например, "10A"
 
-    @OneToMany(mappedBy = "schoolClass", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "schoolClass", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Student> students;
+
 
     @OneToMany(mappedBy = "schoolClass", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ClassSubject> subjects;

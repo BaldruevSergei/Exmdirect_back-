@@ -1,5 +1,6 @@
 package org.example.exmdirect_new.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -17,6 +18,7 @@ public class Student extends User {
 
     @ManyToOne
     @JoinColumn(name = "school_class_id")
+    @JsonBackReference
     private SchoolClass schoolClass; // связь с классом
     // Явный конструктор
     public Student(Long id, String firstName, String lastName, String login, String password, String email, UserRole userRole, SchoolClass schoolClass) {

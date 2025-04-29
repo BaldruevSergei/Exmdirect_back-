@@ -32,6 +32,11 @@ public class SchoolClassService {
         return schoolClassRepository.findByClassTeacher(teacher);
     }
 
+    // найти по имени класса
+    public Optional<SchoolClass> findByName(String name) {
+        return schoolClassRepository.findByName(name);
+    }
+
     // Добавить новый класс
     public SchoolClass saveClass(SchoolClass schoolClass) {
         return schoolClassRepository.save(schoolClass);
