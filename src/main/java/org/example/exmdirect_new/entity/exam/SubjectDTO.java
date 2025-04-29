@@ -15,6 +15,7 @@ public class SubjectDTO {
                 .collect(Collectors.toList());
     }
 
+
     // Геттеры и сеттеры
 
     public Long getId() {

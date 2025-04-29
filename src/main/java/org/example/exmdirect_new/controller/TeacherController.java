@@ -72,7 +72,7 @@ public class TeacherController {
 
     @PostMapping
     public ResponseEntity<Teacher> createTeacher(@RequestBody Teacher teacher) {
-        Teacher savedTeacher = teacherService.createTeacher(teacher);
+        Teacher savedTeacher = teacherService.addTeacher(teacher);
         return ResponseEntity.ok(savedTeacher);
     }
 

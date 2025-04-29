@@ -1,11 +1,13 @@
 package org.example.exmdirect_new.controller.exam;
 
 import org.example.exmdirect_new.entity.exam.Subject;
+import org.example.exmdirect_new.dto.SubjectDTO;
 import org.example.exmdirect_new.service.exam.SubjectService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/subjects")
@@ -24,7 +26,12 @@ public class SubjectController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Subject>> getAllSubjects() {
-        return ResponseEntity.ok(subjectService.getAllSubjects());
+    public ResponseEntity<List<SubjectDTO>> getAllSubjects() {
+        List<SubjectDTO> subjects = subjectService.getAllSubjects().stream()
+                .map(subject -> new SubjectDTO(subject.getId(), subject.getName()))
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(subjects);
     }
+
+
 }
