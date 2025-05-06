@@ -1,5 +1,6 @@
 package org.example.exmdirect_new.controller.exam;
 
+import org.example.exmdirect_new.dto.SubmitExamRequest;
 import org.example.exmdirect_new.entity.exam.StudentExam;
 import org.example.exmdirect_new.service.exam.StudentExamService;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +24,10 @@ public class StudentExamController {
 
     // Завершить экзамен и отправить баллы
     @PostMapping("/submit")
-    public ResponseEntity<StudentExam> submitExam(@RequestParam Long studentId, @RequestParam Long examId, @RequestParam Integer score) {
-        return ResponseEntity.ok(studentExamService.completeExam(studentId, examId, score));
+    public ResponseEntity<StudentExam> submitExam(@RequestBody SubmitExamRequest request) {
+        int score = studentExamService.evaluateExam(request.examId, request.answers);
+        StudentExam result = studentExamService.completeExam(request.studentId, request.examId, score);
+        return ResponseEntity.ok(result);
     }
+
 }

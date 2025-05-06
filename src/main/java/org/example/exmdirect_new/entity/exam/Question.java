@@ -42,4 +42,9 @@ public class Question {
     @ManyToOne
     @JoinColumn(name = "question_group_id", nullable = false)
     private QuestionGroup questionGroup; // Связь с группой вопросов
+
+    @ManyToOne
+    @JoinColumn(name = "exam_id", nullable = true)
+    private Exam exam;
+
 }

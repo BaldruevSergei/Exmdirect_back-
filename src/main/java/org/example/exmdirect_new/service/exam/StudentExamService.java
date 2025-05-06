@@ -1,15 +1,21 @@
 package org.example.exmdirect_new.service.exam;
 
+import org.example.exmdirect_new.dto.StudentAnswerDTO;
 import org.example.exmdirect_new.entity.Student;
 import org.example.exmdirect_new.entity.exam.Exam;
+import org.example.exmdirect_new.entity.exam.Question;
 import org.example.exmdirect_new.entity.exam.StudentExam;
 import org.example.exmdirect_new.repository.StudentRepository;
 import org.example.exmdirect_new.repository.exam.ExamRepository;
+import org.example.exmdirect_new.repository.exam.QuestionRepository;
 import org.example.exmdirect_new.repository.exam.StudentExamRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class StudentExamService {
@@ -17,11 +23,14 @@ public class StudentExamService {
     private final StudentExamRepository studentExamRepository;
     private final ExamRepository examRepository;
     private final StudentRepository studentRepository;
+    private final QuestionRepository questionRepository;
 
-    public StudentExamService(StudentExamRepository studentExamRepository, ExamRepository examRepository, StudentRepository studentRepository) {
+
+    public StudentExamService(StudentExamRepository studentExamRepository, ExamRepository examRepository, StudentRepository studentRepository, QuestionRepository questionRepository) {
         this.studentExamRepository = studentExamRepository;
         this.examRepository = examRepository;
         this.studentRepository = studentRepository;
+        this.questionRepository = questionRepository;
     }
 
     // Начать экзамен
@@ -57,5 +66,26 @@ public class StudentExamService {
         studentExam.setCompletedAt(new Date());
 
         return studentExamRepository.save(studentExam);
+    }
+
+    public int evaluateExam(Long examId, List<StudentAnswerDTO> answers) {
+        // Найди все вопросы этого экзамена (реализуй метод findByExamId)
+        List<Question> questions = questionRepository.findByExamId(examId);
+
+        Map<Long, String> correctAnswers = questions.stream()
+                .collect(Collectors.toMap(
+                        Question::getId,
+                        Question::getCorrectTextAnswer
+                ));
+
+        int score = 0;
+        for (StudentAnswerDTO answer : answers) {
+            String correct = correctAnswers.get(answer.questionId);
+            if (correct != null && correct.trim().equalsIgnoreCase(answer.answer.trim())) {
+                score++;
+            }
+        }
+
+        return score;
     }
 }
