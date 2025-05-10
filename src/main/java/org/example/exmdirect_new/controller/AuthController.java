@@ -1,7 +1,7 @@
 package org.example.exmdirect_new.controller;
 
-
 import org.example.exmdirect_new.dto.LoginRequest;
+import org.example.exmdirect_new.dto.StudentDto;
 import org.example.exmdirect_new.entity.Student;
 import org.example.exmdirect_new.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
-@CrossOrigin(origins = "*") // только для тестов
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
@@ -22,6 +21,7 @@ public class AuthController {
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
+    // ✅ Обработка логина
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest request) {
         Optional<Student> studentOpt = studentRepository.findByLogin(request.login);
@@ -30,12 +30,28 @@ public class AuthController {
         }
 
         Student student = studentOpt.get();
-        if (!student.getPassword().equals(request.password)) {
-            return ResponseEntity.badRequest().body("Неверный пароль"); // временно
+
+        // ✅ сравнение по паролю: если в базе пароль захеширован
+        if (!student.getPassword().equals(request.password) &&
+                !passwordEncoder.matches(request.password, student.getPassword())) {
+            return ResponseEntity.badRequest().body("Неверный пароль");
         }
 
+        StudentDto response = new StudentDto(
+                student.getId(),
+                student.getFirstName(),
+                student.getLastName(),
+                student.getLogin(),
+                student.getSchoolClass().getName(),
+                student.getUserRole().name()
+        );
 
-        return ResponseEntity.ok("OK:" + student.getId() + ":" + student.getFirstName());
+        return ResponseEntity.ok(response);
     }
 
+    // ✅ Обработка preflight (OPTIONS) — чтобы CORS не падал
+    @RequestMapping(value = "/login", method = RequestMethod.OPTIONS)
+    public ResponseEntity<?> handleOptions() {
+        return ResponseEntity.ok().build();
+    }
 }

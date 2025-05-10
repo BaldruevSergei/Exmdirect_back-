@@ -22,7 +22,8 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info().title("EXMDirect API").version("1.0"))
-                .addServersItem(new Server().url("https://ee13-112-72-13-26.ngrok-free.app"));
+                .addServersItem(new Server().url("https://2e2f-112-72-13-26.ngrok-free.app"));
+
     }
 
     @Bean

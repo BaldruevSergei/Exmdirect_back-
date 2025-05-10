@@ -2,6 +2,7 @@ package org.example.exmdirect_new.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -14,18 +15,16 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .cors(Customizer.withDefaults()) // подключение CORS конфигурации
-                .csrf(AbstractHttpConfigurer::disable)
+                .cors(Customizer.withDefaults()) // Включаем CORS
+                .csrf(AbstractHttpConfigurer::disable) // Отключаем CSRF
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers(
-                                "/swagger-ui/**", "/v3/api-docs/**", "/swagger-ui.html",
-                                "/api/auth/**", // для логина
-                                "/api/teachers/**", "/api/questions/**"
-                        ).permitAll()
-                        .anyRequest().authenticated()
-
+                        // Разрешаем все preflight-запросы (OPTIONS)
+                        .requestMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+                        // Разрешаем все остальные запросы (на время разработки)
+                        .anyRequest().permitAll()
                 )
-                .httpBasic(Customizer.withDefaults());
+                .httpBasic(AbstractHttpConfigurer::disable) // Отключаем Basic Auth
+                .formLogin(AbstractHttpConfigurer::disable); // Отключаем форму логина
 
         return http.build();
     }
