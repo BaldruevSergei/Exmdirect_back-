@@ -24,8 +24,17 @@ public class ExamService {
     }
 
     // Получить все экзамены (возвращаем DTO)
-    public List<Exam> getAllExams() {
-        return examRepository.findAll();
+    public List<ExamDTO> getAllExams() {
+        return examRepository.findAll().stream()
+                .map(ExamDTO::new)
+                .toList();
+    }
+
+
+    public List<ExamDTO> getBySubjectId(Long subjectId) {
+        return examRepository.findBySubjectId(subjectId).stream()
+                .map(ExamDTO::new)
+                .toList();
     }
 
 

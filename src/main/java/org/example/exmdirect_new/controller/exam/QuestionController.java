@@ -105,8 +105,8 @@ public class QuestionController {
      * 📌 Получить все экзамены.
      */
     @GetMapping("/exams")
-    public ResponseEntity<List<Exam>> getExams() {
-        List<Exam> exams = examService.getAllExams();
+    public ResponseEntity<List<ExamDTO>> getExams() {
+        List<ExamDTO> exams = examService.getAllExams();
         return ResponseEntity.ok(exams);
     }
 

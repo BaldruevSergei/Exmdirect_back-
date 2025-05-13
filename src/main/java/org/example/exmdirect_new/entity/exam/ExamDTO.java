@@ -1,17 +1,19 @@
 package org.example.exmdirect_new.entity.exam;
 
 public class ExamDTO {
-    private Long id;
-    private String name;
-    private int duration;
+    public Long id;
+    public String name;
+    public int duration;
+    public Long subjectId;
+    public String subjectName;
 
     public ExamDTO(Exam exam) {
         this.id = exam.getId();
         this.name = exam.getName();
         this.duration = exam.getDuration();
+        this.subjectId = exam.getSubject().getId();
+        this.subjectName = exam.getSubject().getName();
     }
-
-    // Геттеры и сеттеры
 
     public Long getId() {
         return id;
@@ -36,4 +38,21 @@ public class ExamDTO {
     public void setDuration(int duration) {
         this.duration = duration;
     }
+
+    public Long getSubjectId() {
+        return subjectId;
+    }
+
+    public void setSubjectId(Long subjectId) {
+        this.subjectId = subjectId;
+    }
+
+    public String getSubjectName() {
+        return subjectName;
+    }
+
+    public void setSubjectName(String subjectName) {
+        this.subjectName = subjectName;
+    }
 }
+

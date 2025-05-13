@@ -25,7 +25,12 @@ public class ExamController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Exam>> getAllExams() {
+    public ResponseEntity<List<ExamDTO>> getAllExams() {
         return ResponseEntity.ok(examService.getAllExams());
+    }
+
+    @GetMapping("/subject/{subjectId}")
+    public ResponseEntity<List<ExamDTO>> getBySubject(@PathVariable Long subjectId) {
+        return ResponseEntity.ok(examService.getBySubjectId(subjectId));
     }
 }
