@@ -1,6 +1,31 @@
 package org.example.exmdirect_new.dto;
 
 public class LoginRequest {
-    public String login;
-    public String password;
+    private String login;
+    private String password;
+
+    // Пустой конструктор обязателен для Spring
+    public LoginRequest() {
+    }
+
+    public LoginRequest(String login, String password) {
+        this.login = login;
+        this.password = password;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }

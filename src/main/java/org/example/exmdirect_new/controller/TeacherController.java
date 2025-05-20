@@ -3,6 +3,7 @@ package org.example.exmdirect_new.controller;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import org.example.exmdirect_new.dto.TeacherResponse;
 import org.example.exmdirect_new.entity.Teacher;
 import org.example.exmdirect_new.service.TeacherService;
 import org.slf4j.Logger;
@@ -75,5 +76,11 @@ public class TeacherController {
         Teacher savedTeacher = teacherService.createTeacher(teacher);
         return ResponseEntity.ok(savedTeacher);
     }
+    @PostMapping("/create-auto")
+    public ResponseEntity<TeacherResponse> createTeacherAuto(@RequestBody Teacher teacher) {
+        TeacherResponse response = teacherService.createTeacherWithResponse(teacher);
+        return ResponseEntity.ok(response);
+    }
+
 
 }

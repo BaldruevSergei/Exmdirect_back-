@@ -2,6 +2,7 @@ package org.example.exmdirect_new.service;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.example.exmdirect_new.dto.TeacherResponse;
 import org.example.exmdirect_new.entity.Teacher;
 import org.example.exmdirect_new.entity.UserRole;
 import org.example.exmdirect_new.repository.TeacherRepository;
@@ -142,6 +143,25 @@ public class TeacherService {
     }
     public Teacher createTeacher(Teacher teacher) {
         return teacherRepository.save(teacher);
+    }
+
+    public TeacherResponse createTeacherWithResponse(Teacher teacher) {
+        String plainPassword = generateTemporaryPassword();
+        teacher.setLogin(generateUniqueLogin());
+        teacher.setPassword(passwordEncoder.encode(plainPassword));
+        teacher.setUserRole(UserRole.TEACHER);
+
+        Teacher saved = teacherRepository.save(teacher);
+
+        return new TeacherResponse(
+                saved.getId(),
+                saved.getLogin(),
+                plainPassword, // отправляем "сырой" пароль
+                saved.getFirstName(),
+                saved.getLastName(),
+                saved.getEmail(),
+                saved.getSubject()
+        );
     }
 
 }
