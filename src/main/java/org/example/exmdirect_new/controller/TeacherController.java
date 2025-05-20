@@ -18,7 +18,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/teachers")
-//@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*")
 public class TeacherController {
 
     private static final Logger logger = LoggerFactory.getLogger(TeacherController.class);
@@ -72,7 +72,7 @@ public class TeacherController {
 
     @PostMapping
     public ResponseEntity<Teacher> createTeacher(@RequestBody Teacher teacher) {
-        Teacher savedTeacher = teacherService.addTeacher(teacher);
+        Teacher savedTeacher = teacherService.createTeacher(teacher);
         return ResponseEntity.ok(savedTeacher);
     }
 

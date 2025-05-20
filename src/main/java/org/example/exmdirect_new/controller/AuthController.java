@@ -1,9 +1,7 @@
 package org.example.exmdirect_new.controller;
 
-import org.example.exmdirect_new.dto.LoginRequest;
-import org.example.exmdirect_new.dto.StudentDto;
-import org.example.exmdirect_new.entity.Student;
-import org.example.exmdirect_new.repository.StudentRepository;
+import org.example.exmdirect_new.entity.Teacher;
+import org.example.exmdirect_new.repository.TeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -16,42 +14,75 @@ import java.util.Optional;
 public class AuthController {
 
     @Autowired
-    private StudentRepository studentRepository;
+    private TeacherRepository teacherRepository;
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
 
-    // ✅ Обработка логина
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest request) {
-        Optional<Student> studentOpt = studentRepository.findByLogin(request.login);
-        if (studentOpt.isEmpty()) {
-            return ResponseEntity.badRequest().body("Неверный логин");
+        Optional<Teacher> teacherOpt = teacherRepository.findByLogin(request.getLogin());
+
+        if (teacherOpt.isEmpty()) {
+            return ResponseEntity.status(401).body("Пользователь не найден");
         }
 
-        Student student = studentOpt.get();
-
-        // ✅ сравнение по паролю: если в базе пароль захеширован
-        if (!student.getPassword().equals(request.password) &&
-                !passwordEncoder.matches(request.password, student.getPassword())) {
-            return ResponseEntity.badRequest().body("Неверный пароль");
+        Teacher teacher = teacherOpt.get();
+        if (!passwordEncoder.matches(request.getPassword(), teacher.getPassword())) {
+            return ResponseEntity.status(401).body("Неверный пароль");
         }
 
-        StudentDto response = new StudentDto(
-                student.getId(),
-                student.getFirstName(),
-                student.getLastName(),
-                student.getLogin(),
-                student.getSchoolClass().getName(),
-                student.getUserRole().name()
-        );
-
-        return ResponseEntity.ok(response);
+        // В проде желательно вернуть JWT
+        return ResponseEntity.ok(new AuthResponse(
+                teacher.getId(),
+                teacher.getLogin(),
+                teacher.getFirstName(),
+                teacher.getLastName(),
+                teacher.getUserRole().toString()
+        ));
     }
 
-    // ✅ Обработка preflight (OPTIONS) — чтобы CORS не падал
-    @RequestMapping(value = "/login", method = RequestMethod.OPTIONS)
-    public ResponseEntity<?> handleOptions() {
-        return ResponseEntity.ok().build();
+    // DTO запроса
+    public static class LoginRequest {
+        private String login;
+        private String password;
+
+        // Getters & setters
+        public String getLogin() {
+            return login;
+        }
+        public void setLogin(String login) {
+            this.login = login;
+        }
+        public String getPassword() {
+            return password;
+        }
+        public void setPassword(String password) {
+            this.password = password;
+        }
+    }
+
+    // DTO ответа
+    public static class AuthResponse {
+        private Long id;
+        private String login;
+        private String firstName;
+        private String lastName;
+        private String role;
+
+        public AuthResponse(Long id, String login, String firstName, String lastName, String role) {
+            this.id = id;
+            this.login = login;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.role = role;
+        }
+
+        // Getters
+        public Long getId() { return id; }
+        public String getLogin() { return login; }
+        public String getFirstName() { return firstName; }
+        public String getLastName() { return lastName; }
+        public String getRole() { return role; }
     }
 }

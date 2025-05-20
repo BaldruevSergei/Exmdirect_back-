@@ -29,7 +29,6 @@ public class TeacherService {
     public Teacher addTeacher(Teacher teacher) {
         teacher.setLogin(generateUniqueLogin()); // Логин временный (TeacherXXXX)
         teacher.setPassword(passwordEncoder.encode(generateTemporaryPassword())); // Временный пароль
-        teacher.setUserRole(UserRole.TEACHER);
         return teacherRepository.save(teacher);
     }
 
@@ -144,6 +143,5 @@ public class TeacherService {
     public Teacher createTeacher(Teacher teacher) {
         return teacherRepository.save(teacher);
     }
-
 
 }
